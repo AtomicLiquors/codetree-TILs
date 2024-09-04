@@ -1,11 +1,10 @@
 const fs = require('fs');
 const lines = fs.readFileSync(0, 'utf-8').split('\n');
 
-const MAX_PRICE = 50 * 1000 + 1;
 
 const [N, P] = lines[0].split(' ').filter(s => s !== '').map(Number);
 
-const DP = new Array(N+1).fill(MAX_PRICE);
+const DP = new Array(N+1).fill(Number.MAX_SAFE_INTEGER);
 DP[0] = 0;
 
 lines.slice(1).forEach((line) => {
