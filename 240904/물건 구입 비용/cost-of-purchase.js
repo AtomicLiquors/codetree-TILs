@@ -12,6 +12,9 @@ const shops = lines.slice(1).map((line) => {
     return [amount, price];
 })
 
+console.log(maxAmount);
+
+/*
 const DP = new Array(maxAmount+1).fill(Number.MAX_SAFE_INTEGER);
 DP[0] = 0;
 
@@ -26,3 +29,5 @@ shops.forEach((shop) => {
 let answer = Math.min(...DP.slice(N, DP.length));
 
 console.log(answer);
+
+*/
