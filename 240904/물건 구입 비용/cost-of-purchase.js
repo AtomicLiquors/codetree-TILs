@@ -1,7 +1,7 @@
 const fs = require('fs');
 const lines = fs.readFileSync(0, 'utf-8').split('\n');
 
-const MAX_PRICE = 20 * 1000 + 1;
+const MAX_PRICE = 50 * 1000 + 1;
 
 const [N, P] = lines[0].split(' ').filter(s => s !== '').map(Number);
 
