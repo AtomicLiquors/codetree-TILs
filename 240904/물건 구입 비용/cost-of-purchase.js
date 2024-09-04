@@ -11,6 +11,8 @@ lines.slice(1).forEach((line) => {
     const [amount, price] = line.split(' ').filter(s => s !== '').map(Number);
     
     for(let n = amount; n <= N; n++){
+        if(DP[n - amount] === Number.MAX_SAFE_INTEGER)
+            continue;
         DP[n] = Math.min(price + DP[n - amount], DP[n]);
     }
 })
