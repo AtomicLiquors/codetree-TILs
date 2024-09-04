@@ -7,7 +7,7 @@ const [N, _] = lines[0].split(' ').filter(s => s !== '').map(Number);
 let maxAmount = N;
 
 const shops = lines.slice(1).map((line) => {
-    const [amount, price] = line.split(' ').filter(s => s !== '').map(Number);
+    const [amount, price] = line.trim().split(' ').filter(s => s !== '').map(Number);
     maxAmount = Math.max(amount, maxAmount);
     return [amount, price];
 })
