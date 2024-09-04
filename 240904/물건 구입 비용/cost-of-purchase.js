@@ -8,11 +8,11 @@ let maxAmount = N;
 
 const shops = lines.slice(1).map((line) => {
     const [amount, price] = line.trim().split(' ').filter(s => s !== '').map(Number);
-    maxAmount = Math.max(amount, maxAmount);
+    console.log(amount);
+//    maxAmount = Math.max(amount, maxAmount);
     return [amount, price];
 })
 
-console.log(maxAmount);
 
 /*
 const DP = new Array(maxAmount+1).fill(Number.MAX_SAFE_INTEGER);
