@@ -12,6 +12,8 @@ const shops = lines.slice(1).map((line) => {
     return [amount, price];
 })
 
+maxAmount *= 2;
+
 
 const DP = new Array(maxAmount+1).fill(Number.MAX_SAFE_INTEGER);
 DP[0] = 0;
