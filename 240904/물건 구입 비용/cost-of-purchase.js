@@ -1,5 +1,5 @@
 const fs = require('fs');
-const lines = fs.readFileSync(0, 'utf-8').split('\n');
+const lines = fs.readFileSync(0, 'utf-8').trim().split('\n');
 
 
 const [N, _] = lines[0].trim().split(' ').filter(s => s !== '').map(Number);
@@ -8,13 +8,11 @@ let maxAmount = N;
 
 const shops = lines.slice(1).map((line) => {
     const [amount, price] = line.trim().split(' ').filter(s => s !== '').map(Number);
-    console.log(amount);
-//    maxAmount = Math.max(amount, maxAmount);
+    maxAmount = Math.max(amount, maxAmount);
     return [amount, price];
 })
 
 
-/*
 const DP = new Array(maxAmount+1).fill(Number.MAX_SAFE_INTEGER);
 DP[0] = 0;
 
@@ -29,5 +27,3 @@ shops.forEach((shop) => {
 let answer = Math.min(...DP.slice(N, DP.length));
 
 console.log(answer);
-
-*/
